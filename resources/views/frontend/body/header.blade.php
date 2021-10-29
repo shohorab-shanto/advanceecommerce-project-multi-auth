@@ -6,16 +6,16 @@
         <div class="header-top-inner">
           <div class="cnt-account">
             <ul class="list-unstyled">
-              <li><a href="#"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') मेरी प्रोफाइल @else My Profile @endif</a></li>
-              <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>@if (session()->get('language') == 'hindi') इच्छा-सूची @else Wishlist @endif</a></li>
-              <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>@if (session()->get('language') == 'hindi') मेरी गाड़ी @else My Cart @endif</a></li>
-              <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>@if (session()->get('language') == 'hindi') चेक आउट @else Checkout @endif</a></li>
+              <li><a href="#"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') আমার প্রোফাইল @else My Profile @endif</a></li>
+              <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>@if (session()->get('language') == 'hindi') ইচ্ছেতালিকা @else Wishlist @endif</a></li>
+              <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>@if (session()->get('language') == 'hindi') আমার কার্ট @else My Cart @endif</a></li>
+              <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>@if (session()->get('language') == 'hindi') চেকআউট @else Checkout @endif</a></li>
               <li>
 
                @auth
-               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') उपयोगकर्ता प्रोफ़ाइल @else User Profile @endif</a>
+               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') ব্যাবহারকারীর বিস্তারিত @else User Profile @endif</a>
                @else
-               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') लॉग इन/रजिस्टर @else Login/Register @endif</a>
+               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') লগইন/রেজিস্টার করুন @else Login/Register @endif</a>
                @endauth
 
 
@@ -33,12 +33,12 @@
                   <li><a href="#">GBP</a></li>
                 </ul>
               </li>
-              <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">@if (session()->get('language') == 'hindi') भाषा: हिंदी @else Language @endif</span><b class="caret"></b></a>
+              <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">@if (session()->get('language') == 'hindi') বাংলা @else Language @endif</span><b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     @if (session()->get('language') == 'hindi')  <!-- hindi select kora thkle english dekhabe R english select kora thkle hindi dekhabe-->
                     <li><a href="{{ route('english.language') }}">English</a></li>
                     @else
-                    <li><a href="{{ route('hindi.language') }}">हिंदी</a></li>
+                    <li><a href="{{ route('hindi.language') }}">বাংলা</a></li>
                     @endif
 
                 </ul>
@@ -182,7 +182,7 @@
                             <!-- /.col -->
                             @endforeach <!-- subcat foreach -->
 
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="{{ asset('frontend/assets/images/banners/top-menu-banner.jpg') }}" alt=""> </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="{{ asset('frontend/assets/images/testimonials/member4.png') }}" alt=""> </div>
                             <!-- /.yamm-content -->
                           </div>
                         </div>

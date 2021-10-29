@@ -23,7 +23,7 @@
                           <tr>
                               <th>Category</th>
                               <th>SubCategory En</th>
-                              <th>SubCategory Hin</th>
+                              <th>SubCategory Ban</th>
                               <th>Action</th>
                           </tr>
                       </thead>
@@ -103,7 +103,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <h5>SubCategory Hindi<span class="text-danger">*</span></h5>
+                                                <h5>SubCategory Bangla<span class="text-danger">*</span></h5>
                                                 <div class="controls">
                                                     <input type="text" name="subcategory_name_hin" class="form-control" >
 

@@ -22,7 +22,7 @@
                       <thead>
                           <tr>
                               <th>Brand En</th>
-                              <th>Brand Hin</th>
+                              <th>Brand ban</th>
                               <th>Image</th>
                               <th>Action</th>
                           </tr>
@@ -85,7 +85,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <h5>Brand Name Hindi <span class="text-danger">*</span></h5>
+                                                <h5>Brand Name Bangla <span class="text-danger">*</span></h5>
                                                 <div class="controls">
                                                     <input type="text" name="brand_name_hin" class="form-control" >
 

@@ -133,7 +133,7 @@
                             <div class="col-md-4">
 
                                 <div class="form-group">
-                                    <h5>Product Name Hin <span class="text-danger">*</span></h5>
+                                    <h5>Product Name Ban <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                         <input type="text" name="product_name_hin" class="form-control" required="">
 
@@ -200,7 +200,7 @@
                             <div class="col-md-4">
 
                                 <div class="form-group">
-                                    <h5>Product Tag Hin <span class="text-danger">*</span></h5>
+                                    <h5>Product Tag ban <span class="text-danger">*</span></h5>
                                     <div class="controls">
                                         <input type="text" name="product_tags_hin" class="form-control"  value="Lorem,Ipsum,Amet" data-role="tagsinput" required="">
 
@@ -230,7 +230,7 @@
                             <div class="col-md-4">
 
                                 <div class="form-group">
-                                    <h5>Product Size Hin<span class="text-danger">*</span></h5>
+                                    <h5>Product Size Ban<span class="text-danger">*</span></h5>
                                     <div class="controls">
                                         <input type="text" name="product_size_hin" class="form-control"  value="Small,Medium,Large" data-role="tagsinput" required="">
 
@@ -263,7 +263,7 @@
                             <div class="col-md-4">
 
                                 <div class="form-group">
-                                    <h5>Product Color Hin<span class="text-danger">*</span></h5>
+                                    <h5>Product Color Ban<span class="text-danger">*</span></h5>
                                     <div class="controls">
                                         <input type="text" name="product_color_hin" class="form-control"  value="Red,Black,Blue" data-role="tagsinput" required="">
 
@@ -358,7 +358,7 @@
                             <div class="col-md-6">
 
                                 <div class="form-group">
-                                    <h5>Short Description Hindi<span class="text-danger">*</span></h5>
+                                    <h5>Short Description Bangla<span class="text-danger">*</span></h5>
                                     <div class="controls">
                                         <textarea name="short_descp_hin" id="short_descp_hin" class="form-control" required placeholder="Textarea text" required=""></textarea>
 
@@ -391,7 +391,7 @@
                                     <div class="controls">
 
                                         <textarea id="editor2" name="long_descp_hin" rows="10" cols="80" required="">
-                                            Long Description Hindi
+                                            Long Description Bangla
                                         </textarea>
 
                                     </div>
