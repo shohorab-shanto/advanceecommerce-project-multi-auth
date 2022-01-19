@@ -6,16 +6,16 @@
         <div class="header-top-inner">
           <div class="cnt-account">
             <ul class="list-unstyled">
-              <li><a href="#"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') আমার প্রোফাইল @else My Profile @endif</a></li>
-              <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>@if (session()->get('language') == 'hindi') ইচ্ছেতালিকা @else Wishlist @endif</a></li>
-              <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>@if (session()->get('language') == 'hindi') আমার কার্ট @else My Cart @endif</a></li>
-              <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>@if (session()->get('language') == 'hindi') চেকআউট @else Checkout @endif</a></li>
+              <li><a href="#"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'bangla') আমার প্রোফাইল @else My Profile @endif</a></li>
+              <li><a href="{{ route('wishlist') }}"><i class="icon fa fa-heart"></i>@if (session()->get('language') == 'bangla') ইচ্ছেতালিকা @else Wishlist @endif</a></li>
+              <li><a href="{{ route('mycart') }}"><i class="icon fa fa-shopping-cart"></i>@if (session()->get('language') == 'bangla') আমার কার্ট @else My Cart @endif</a></li>
+              <li><a href="{{ route('checkout') }}"><i class="icon fa fa-check"></i>@if (session()->get('language') == 'bangla') চেকআউট @else Checkout @endif</a></li>
               <li>
 
                @auth
-               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') ব্যাবহারকারীর বিস্তারিত @else User Profile @endif</a>
+               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'bangla') ব্যাবহারকারীর বিস্তারিত @else User Profile @endif</a>
                @else
-               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'hindi') লগইন/রেজিস্টার করুন @else Login/Register @endif</a>
+               <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if (session()->get('language') == 'bangla') লগইন/রেজিস্টার করুন @else Login/Register @endif</a>
                @endauth
 
 
@@ -35,10 +35,10 @@
               </li>
               <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">@if (session()->get('language') == 'hindi') বাংলা @else Language @endif</span><b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    @if (session()->get('language') == 'hindi')  <!-- hindi select kora thkle english dekhabe R english select kora thkle hindi dekhabe-->
+                    @if (session()->get('language') == 'bangla')  <!-- hindi select kora thkle english dekhabe R english select kora thkle hindi dekhabe-->
                     <li><a href="{{ route('english.language') }}">English</a></li>
                     @else
-                    <li><a href="{{ route('hindi.language') }}">বাংলা</a></li>
+                    <li><a href="{{ route('bangla.language') }}">বাংলা</a></li>
                     @endif
 
                 </ul>
@@ -145,7 +145,7 @@
             <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
               <div class="nav-outer">
                 <ul class="nav navbar-nav">
-                  <li class="active dropdown yamm-fw"> <a href="{{ url('/') }}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">@if (session()->get('language') == 'hindi') घर @else Home @endif</a> </li>
+                  <li class="active dropdown yamm-fw"> <a href="{{ url('/') }}" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">@if (session()->get('language') == 'bangla') Home @else Home @endif</a> </li>
 
                   {{-- get category table data --}}
                   @php
@@ -153,7 +153,7 @@
                   @endphp
 
                   @foreach ($categories as $category)
-                  <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">@if (session()->get('language') == 'hindi') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif</a>
+                  <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">@if (session()->get('language') == 'bangla') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif</a>
                     <ul class="dropdown-menu container">
                       <li>
                         <div class="yamm-content ">
@@ -166,7 +166,7 @@
 
                             @foreach ($subcategories as $subcat)
                             <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                              <a href="{{ url('subcategory/product/'.$subcat->id.'/'.$subcat->subcategory_slug_en) }}"><h2 class="title">@if (session()->get('language') == 'hindi') {{ $subcat->subcategory_name_hin }} @else {{ $subcat->subcategory_name_en }} @endif</h2></a>
+                              <a href="{{ url('subcategory/product/'.$subcat->id.'/'.$subcat->subcategory_slug_en) }}"><h2 class="title">@if (session()->get('language') == 'bangla') {{ $subcat->subcategory_name_hin }} @else {{ $subcat->subcategory_name_en }} @endif</h2></a>
 
                               {{-- get subcategory table data..category table er id er sathe subcat er cat id match korle subcat show korbe ei condition dite hobe --}}
                                 @php
@@ -175,7 +175,7 @@
 
                               @foreach ($subsubcategories as $subsubcat)
                               <ul class="links">
-                                <li><a href="{{ url('subsubcategory/product/'.$subsubcat->id.'/'.$subsubcat->subsubcategory_slug_en) }}">@if (session()->get('language') == 'hindi') {{ $subsubcat->subsubcategory_name_hin }} @else {{ $subsubcat->subsubcategory_name_en }} @endif</a></li>
+                                <li><a href="{{ url('subsubcategory/product/'.$subsubcat->id.'/'.$subsubcat->subsubcategory_slug_en) }}">@if (session()->get('language') == 'bangla') {{ $subsubcat->subsubcategory_name_hin }} @else {{ $subsubcat->subsubcategory_name_en }} @endif</a></li>
                               </ul>
                               @endforeach <!-- subsubcat foreach -->
                             </div>

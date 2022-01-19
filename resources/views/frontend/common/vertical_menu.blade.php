@@ -9,7 +9,7 @@
 
 
         @foreach ($categories as $category)
-        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon {{ $category->category_icon }}" aria-hidden="true"></i>@if (session()->get('language') == 'hindi') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif</a>
+        <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon {{ $category->category_icon }}" aria-hidden="true"></i>@if (session()->get('language') == 'bangla') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif</a>
           <ul class="dropdown-menu mega-menu">
             <li class="yamm-content">
               <div class="row">
@@ -21,7 +21,7 @@
 
                 @foreach ($subcategories as $subcat)
                 <div class="col-sm-12 col-md-3">
-                   <a href="{{ url('subcategory/product/'.$subcat->id.'/'.$subcat->subcategory_slug_en) }}"> <h2 class="title">@if (session()->get('language') == 'hindi') {{ $subcat->subcategory_name_hin }} @else {{ $subcat->subcategory_name_en }} @endif</h2></a>
+                   <a href="{{ url('subcategory/product/'.$subcat->id.'/'.$subcat->subcategory_slug_en) }}"> <h2 class="title">@if (session()->get('language') == 'bangla') {{ $subcat->subcategory_name_hin }} @else {{ $subcat->subcategory_name_en }} @endif</h2></a>
 
                     {{-- get subcategory table data..category table er id er sathe subcat er cat id match korle subcat show korbe ei condition dite hobe --}}
                     @php
@@ -30,7 +30,7 @@
 
                   @foreach ($subsubcategories as $subsubcat)
                   <ul class="links list-unstyled">
-                    <li><a href="{{ url('subsubcategory/product/'.$subsubcat->id.'/'.$subsubcat->subsubcategory_slug_en) }}">@if (session()->get('language') == 'hindi') {{ $subsubcat->subsubcategory_name_hin }} @else {{ $subsubcat->subsubcategory_name_en }} @endif</a></li>
+                    <li><a href="{{ url('subsubcategory/product/'.$subsubcat->id.'/'.$subsubcat->subsubcategory_slug_en) }}">@if (session()->get('language') == 'bangla') {{ $subsubcat->subsubcategory_name_hin }} @else {{ $subsubcat->subsubcategory_name_en }} @endif</a></li>
                   </ul>
                   @endforeach <!-- end subcat foreach -->
                 </div>

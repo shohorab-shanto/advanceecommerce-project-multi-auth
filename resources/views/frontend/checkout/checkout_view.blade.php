@@ -215,8 +215,14 @@
                 </div><!-- end col-md-4 -->
 
                 <div class="col-md-4">
-                    <label for="">Card</label>
-                    <input type="radio" name="payment_method" value="card">
+                    <label for="">SSL Host</label>
+                    <input type="radio" name="payment_method" value="sslHost">
+                    <img src="{{ asset('frontend/assets/images/payments/3.png') }}">
+                </div><!-- end col-md-4 -->
+
+                <div class="col-md-4">
+                    <label for="">SSL Easy</label>
+                    <input type="radio" name="payment_method" value="sslEasy">
                     <img src="{{ asset('frontend/assets/images/payments/3.png') }}">
                 </div><!-- end col-md-4 -->
 

@@ -21,6 +21,7 @@ use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\StripeController;
 use App\Http\Controllers\User\AllUserController;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 use App\Models\User;
 
@@ -263,7 +264,7 @@ Route::prefix('shipping')->group(function(){
 // frontend all routes
 // multilanguage all route
 
-Route::get('/language/hindi',[LanguageController::class, 'Hindi'])->name('hindi.language');
+Route::get('/language/bangla',[LanguageController::class, 'Bangla'])->name('bangla.language');
 
 Route::get('/language/english',[LanguageController::class, 'English'])->name('english.language');
 
@@ -311,6 +312,8 @@ Route::get('/my/orders',[AllUserController::class, 'MyOrders'])->name('my.orders
 
 Route::get('/order_details/{order_id}',[AllUserController::class, 'OrdersDetails']);
 
+Route::get('/invoice_download/{order_id}',[AllUserController::class, 'InvoiceDownload']);
+
 
 
 });
@@ -349,3 +352,18 @@ Route::get('/state-get/ajax/{district_id}',[CheckoutController::class, 'StateGet
 Route::post('/checkout/store',[CheckoutController::class, 'CheckoutStore'])->name('checkout.store');
 
 Route::post('/stripe/order',[StripeController::class, 'StripeOrder'])->name('stripe.order');
+
+
+// SSLCOMMERZ Start
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END

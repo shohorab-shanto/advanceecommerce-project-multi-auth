@@ -12,6 +12,7 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use Auth;
 use Carbon\Carbon;
+use PDF;
 
 
 class AllUserController extends Controller
@@ -23,7 +24,17 @@ class AllUserController extends Controller
 
     public function OrdersDetails($order_id){
         $order = Order::where('id',$order_id)->where('user_id',Auth::id())->first(); //to get specific row data use first and order id and user id willmatch with our order table id
-        $orderItem = OrderItem::where('order_id',$order_id)->orderBy('id','DESC')->get();
-        return view('frontend.user.order.order_details',compact('order','orderItem'));
+        $orderItems = OrderItem::where('order_id',$order_id)->orderBy('id','DESC')->get();
+        return view('frontend.user.order.order_details',compact('order','orderItems'));
+     }
+
+     //invoice download
+     public function InvoiceDownload($order_id){
+        $order = Order::where('id',$order_id)->where('user_id',Auth::id())->first(); //to get specific row data use first and order id and user id willmatch with our order table id
+        $orderItems = OrderItem::where('order_id',$order_id)->orderBy('id','DESC')->get();
+
+        $pdf = PDF::loadView('frontend.user.order.invoice',compact('order','orderItems'));
+        return $pdf->download('invoice.pdf');
+
      }
 }

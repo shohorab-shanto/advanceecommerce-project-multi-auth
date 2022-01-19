@@ -64,7 +64,7 @@
                 <span class="invalid_feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
-                @enderror
+                @enderror 
             </div>
 
 		<div class="form-group">

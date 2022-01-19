@@ -270,7 +270,7 @@
                           <!-- /.product-image -->
 
                           <div class="product-info text-left">
-                            <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en) }}">@if (session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
+                            <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en) }}">@if (session()->get('language') == 'bangla') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="description"></div>
 
@@ -334,7 +334,7 @@
                           <!-- /.col -->
                           <div class="col col-sm-8 col-lg-8">
                             <div class="product-info">
-                              <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en) }}">@if (session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
+                              <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en) }}">@if (session()->get('language') == 'bangla') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
                               <div class="rating rateit-small"></div>
 
                               @if ($product->discount_price == NULL)

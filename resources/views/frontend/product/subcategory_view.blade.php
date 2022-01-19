@@ -40,7 +40,7 @@
 
                     @foreach($categories as $category)
                     <div class="accordion-group">
-                      <div class="accordion-heading"> <a href="#collapse{{ $category->id }}" data-toggle="collapse" class="accordion-toggle collapsed"> @if (session()->get('language') == 'hindi') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif </a> </div>
+                      <div class="accordion-heading"> <a href="#collapse{{ $category->id }}" data-toggle="collapse" class="accordion-toggle collapsed"> @if (session()->get('language') == 'bangla') {{ $category->category_name_hin }} @else {{ $category->category_name_en }} @endif </a> </div>
                       <!-- /.accordion-heading -->
                       <div class="accordion-body collapse" id="collapse{{ $category->id }}" style="height: 0px;">
                         <div class="accordion-inner">
@@ -51,7 +51,7 @@
 
                           @foreach ($subcategories as $subcat)
                           <ul>
-                            <li><a href="{{ url('subcategory/product/'.$subcat->id.'/'.$subcat->subcategory_slug_en) }}">@if (session()->get('language') == 'hindi') {{ $subcat->subcategory_name_hin }} @else {{ $subcat->subcategory_name_en }} @endif</a></li>
+                            <li><a href="{{ url('subcategory/product/'.$subcat->id.'/'.$subcat->subcategory_slug_en) }}">@if (session()->get('language') == 'bangla') {{ $subcat->subcategory_name_hin }} @else {{ $subcat->subcategory_name_en }} @endif</a></li>
                           </ul>
                           @endforeach
                         </div>
